@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title> This is Jenny's Page </title>
+        <meta name="description" content="This is Jenny's 1st page">
+    </head>
+    <body>
+        <div id="main-content">
+            <h1> Welcome to Jenny's Page! </h1><br>
+            <h3> Here's my whole world! </h3>
+            <img src="images/family.jpg" alt="Family Photo" width=150>
+            <img src="images/leah1.jpg" alt="Leah Photo" width=150>
+            <img src="images/lena.jpg" alt="Lena Photo" width=150>
+            <img src="images/ramen.jpg" alt="Ramen Photo" width=150>
+            <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur massa nisi, fringilla at sollicitudin id, iaculis et sapien. Aenean id erat a est rutrum tempus in in est. Vivamus ac lacinia odio. Duis viverra in neque in fringilla. Quisque posuere urna a lectus pellentesque commodo id pretium dui. Aliquam quis suscipit purus. Donec congue elit sit amet massa tempus iaculis. Interdum et malesuada fames ac ante ipsum primis in faucibus. Sed sodales sed nulla quis scelerisque. vivamus suscipit.<br>Viverra ipsum hendrerit mattis. Aenean quis luctus velit. Sed sed dolor vel nulla sodales porttitor. Praesent finibus quam facilisis magna bibendum commodo. Cras molestie feugiat justo vel mollis. </p>
+        </div>
+        <div id="facts">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Relationship</th>
+                        <th>Age</th>
+                        <th>Hobby</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Grant</td>
+                        <td>Hubby</td>
+                        <td>33</td>
+                        <td>Drinking beer!</td>
+                    </tr>
+                    <tr>
+                        <td>Leah</td>
+                        <td>Daughter</td>
+                        <td>5 1/2 </td>
+                        <td>Making Videos<br>
+                            <a href= "https://youtu.be/Y44hPKwOGOg">Click here for her House Tour Video</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Lena</td>
+                        <td>Daughter</td>
+                        <td>2</td>
+                        <td>Making grumpy faces </td>
+                    </tr>
+                    <tr>
+                        <td>Ramen</td>
+                        <td>Dog</td>
+                        <td>9</td>
+                        <td>Sleeping</td>
+                    </tr>
+
+                </tbody>
+            </table>
+        </div>
+        <div id= "schedules">
+            <h3>Next Events Coming Up!</h3>
+                <ul>
+                    <li> May 23rd: Jenny's birthday</li>
+                    <li> May 30th: Grant's birthday</li>
+                    <li> June 17th: Leah's ballet recital</li>
+                    <li> June 20th: Wedding Anniversory</li>
+                </ul>
+        </div>
+        <div id="projects">
+            <h3>Deck Projects Priority</h3>
+                <ol>
+                    <li> Power wash deck</li>
+                    <li> Stain the deck</li>
+                    <li> Clear out backyard</li>
+                    <li> Install string lights under the deck</li>
+                </ol>
+        </div>
+        <div id="forms">
+            <form action="process.php" method="post">
+                <h4> Want to hear more about...</h4>
+                <label for="Jenny"> Jenny</label>
+                <input type="checkbox" id="Jenny" name="select"><br>
+                <label for="Grant"> Grant</label>
+                <input type="checkbox" id="Grant" name="select"><br>
+                <label for="Leah"> Leah</label>
+                <input type="checkbox" id="Leah" name="select"><br>
+                <label for="Lena"> Lena</label>
+                <input type="checkbox" id="Lena" name="select"><br>
+                <label for="Ramen"> Ramen</label>
+                <input type="checkbox" id="Ramen" name="select"><br><br>
+
+                <label for="email">To Recieve Updates</label>
+                <input type="text" id="email" name="email" value="enter your email here">
+
+                <label for="month"> Monthly</label>
+                <input type="radio" id="month" name="update_frequency">
+
+                <label for="year"> Yearly</label>
+                <input type="radio" id="year" name="update_frequency"><br>
+
+                <label for="submit"></label>
+                <input type="submit" id="submit" name="SUBMIT">
+            </form>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Pacman</title>
+    <style type="text/css">
+        body {
+            background-color: black;
+            line-height: 0px;
+            margin: 0px;
+        }
+        
+        .row div {
+            height: 20px;
+            width: 20px;
+            display: inline-block;
+        }
+        
+        .brick {
+            background-color: mediumblue;
+        }
+        
+        .coin {
+            background-image: url("images/coin.gif");
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: 10px;
+        }
+        
+        .empty {}
+        
+        #pacman {
+            background-image: url("images/Pacman.gif");
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            width: 20px;
+            height: 20px;
+            position: absolute;
+        }
+        
+        #score {
+            border: 1px solid white;
+            color: white;
+            width: 150px;
+            height: 15px;
+            padding: 7px;
+            text-align: center;
+            position: absolute;
+            top: 10px;
+            left: 450px;
+            padding-top: 20px;
+        }
+        
+        #cherry {
+            background-image: url(images/cherries.png);
+            background-repeat: no-repeat;
+            width: 20px;
+            height: 20px;
+            background-position: center;
+            background-size: 20px;
+            position: absolute;
+            top: 100px;
+            left: 500px;
+        }
+
+    </style>
+</head>
+
+
+<body>
+    <div id='world'></div>
+    <div id='pacman'></div>
+    <div id='score'>0</div>
+    <div id='cherry'></div>
+    <script>
+        var world = [
+            [2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2],
+            [2, 0, 1, 1, 1, 1, 1, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2],
+            [2, 1, 1, 1, 1, 2, 1, 2, 1, 2, 1, 1, 1, 2, 2, 1, 2, 1, 1, 2],
+            [2, 1, 1, 2, 1, 2, 1, 2, 1, 2, 1, 1, 1, 1, 1, 1, 2, 1, 1, 2],
+            [2, 1, 1, 2, 1, 2, 1, 2, 1, 2, 1, 1, 1, 1, 2, 1, 2, 1, 1, 2],
+            [2, 1, 1, 2, 1, 2, 1, 1, 1, 1, 1, 1, 1, 1, 2, 1, 2, 1, 1, 2],
+            [2, 1, 1, 2, 1, 2, 2, 2, 2, 2, 1, 1, 1, 1, 2, 1, 1, 1, 1, 2],
+            [2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 2, 2, 2, 1, 1, 1, 1, 2],
+            [2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2],
+            [2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2]
+        ];
+
+        var score = 0;
+
+        var pacman = {
+            x: 1,
+            y: 1
+        };
+
+        var cherry = {
+            x: 0,
+            y: 0
+        }
+
+
+        //        function displayCherry(){
+        //            document.getElementById('cherry').innerHTML = cherry.y *20 + "px";
+        //            document.getElementById('cherry').innerHTML = cherry.x *20 + "px";
+        //            
+        //            for (var i =0; i < world.length; i++) {
+        //                for (var j =0 ; j < world[i].length, i++) {
+        //                    if(score == 70 || 120 ||220) {
+        //                        cherry.show
+        ////                    }
+        ////                }
+        ////            }
+        ////        }
+        //        displayCherry();   
+        //            console.log(cherry);
+
+
+
+        function displayWorld() {
+            var output = '';
+
+            for (var i = 0; i < world.length; i++) {
+                output += "\n<div class='row'>\n";
+                for (var j = 0; j < world[i].length; j++) {
+                    if (world[i][j] == 2) {
+                        output += "<div class='brick'></div>";
+                    } else if (world[i][j] == 1 || world[i][j] == 3) {
+                        output += "<div class='coin'></div>";
+                    }
+                    if (world[i][j] == 0) {
+                        output += "<div class='empty'></div>";
+                    };
+                }
+                output += "\n</div>";
+            }
+            document.getElementById('world').innerHTML = output;
+        }
+
+        function displayPacman() {
+            document.getElementById('pacman').style.top = pacman.y * 20 + "px";
+            document.getElementById('pacman').style.left = pacman.x * 20 + "px";
+        }
+
+        function displayScore() {
+            document.getElementById('score').innerHTML = score;
+        }
+
+        displayWorld();
+        displayPacman();
+
+        document.onkeydown = function(e) {
+            if (e.keyCode == 37 && world[pacman.y][pacman.x - 1] != 2) {
+                pacman.x--;
+            } else if (e.keyCode == 39 && world[pacman.y][pacman.x + 1] != 2) {
+                pacman.x++;
+            } else if (e.keyCode == 38 && world[pacman.y - 1][pacman.x] != 2) {
+                pacman.y--;
+            } else if (e.keyCode == 40 && world[pacman.y + 1][pacman.x] != 2) {
+                pacman.y++;
+            }
+
+            if (world[pacman.y][pacman.x] == 1) {
+                world[pacman.y][pacman.x] = 0;
+                score += 10;
+                displayWorld();
+                displayScore();
+            }
+            //            console.log(e.keyCode);
+            displayPacman();
+        }
+
+    </script>
+
+
+
+
+
+
+</body>
+
+</html>

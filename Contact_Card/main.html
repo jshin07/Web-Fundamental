@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset='utf-8'>
+        <title>Contact Cards</title>
+        <link rel="stylesheet" href="style.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js" type="text/javascript"></script>
+        <script type="text/javascript">
+            $(document).ready(function(){
+                $("#button").click(function(){
+                   var first = $("#first_name").val();
+                   var last = $("#last_name").val();
+                   var dscrp = $("textarea").val();
+                   $("#right").append(`<p class="hidden"> ${dscrp}</p>`);
+                   
+                   var card= `  <p class= "contact_card">
+                                <h1>${first} ${last}</h1>
+                                </p>
+                                <a id= "des">Click for description!</a>
+                                `;
+                    $("#right").append(card);
+                return false;
+                });
+                   
+                $(document).on ("click", "#des", function(){
+                    $("#right").children().hide();
+                    $("#right").children(".hidden").show();
+                });
+            });       
+                    
+	   </script>
+    </head>
+    
+    <body>
+        <div class="wrapper">
+        <div class="wrapper">
+            <form id="left">
+                First Name: <input type="text" placeholder="First Name" id="first_name"><br>
+                Last Name: <input type="text" placeholder="Last Name" id="last_name"> <br>
+                Description: <br><textarea placeholder="Enter description" id="description"></textarea><br>  
+                <input type="submit" value="Add User" id="button">
+            </form>  
+            <div id="right"></div>
+        </div>
+    </body>
+</html>
+

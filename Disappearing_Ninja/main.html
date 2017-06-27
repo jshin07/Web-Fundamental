@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>JQuery qualifying exam- assignment 1</title>
+        <link rel="stylesheet" href="style.css">
+        <script src="jquery-3.2.1.min.js"></script>
+        <script type="text/javascript">
+            $(document).ready(function(){
+                $("img").click(function(){
+                    $(this).hide("slow");
+                });
+                $("button").click(function(){
+                    $("img").show("slow");
+                });
+            });
+        </script>
+    </head>
+    <body>
+        <div class = "main">
+            <h2> JQuery- assignment 1</h2>
+            <img src = "dojocat.jpg" alt="dojocat">
+            <img src = "dojocat.jpg" alt="dojocat">
+            <img src = "dojocat.jpg" alt="dojocat">
+            <img src = "dojocat.jpg" alt="dojocat">
+            <img src = "dojocat.jpg" alt="dojocat">
+            <img src = "dojocat.jpg" alt="dojocat">
+            <img src = "dojocat.jpg" alt="dojocat">
+            <img src = "dojocat.jpg" alt="dojocat">
+            <button> Restore </button>
+        </div>
+
+    </body>
+</html>

@@ -1,0 +1,273 @@
+* {
+    margin: 0px;
+    padding: 0px;
+
+}
+
+.top_bar {
+    width:1000px;
+    height: 70px;
+    margin-left: auto;
+    margin-right: auto;
+    background: rgba(35,115,184,1);
+    background: -moz-linear-gradient(top, rgba(35,115,184,1) 0%, rgba(220,223,229,1) 50%, rgba(224,225,230,1) 51%, rgba(35,115,184,1) 100%);
+    background: -webkit-gradient(to top, right top, color-stop(0%, rgba(35,115,184,1)), color-stop(50%, rgba(220,223,229,1)), color-stop(51%, rgba(224,225,230,1)), color-stop(100%, rgba(35,115,184,1)));
+    background: -webkit-linear-gradient(top, rgba(35,115,184,1) 0%, rgba(220,223,229,1) 50%, rgba(224,225,230,1) 51%, rgba(35,115,184,1) 100%);
+    background: -o-linear-gradient(top, rgba(35,115,184,1) 0%, rgba(220,223,229,1) 50%, rgba(224,225,230,1) 51%, rgba(35,115,184,1) 100%);
+    background: -ms-linear-gradient(top, rgba(35,115,184,1) 0%, rgba(220,223,229,1) 50%, rgba(224,225,230,1) 51%, rgba(35,115,184,1) 100%);
+    background: linear-gradient(to top, rgba(35,115,184,1) 0%, rgba(220,223,229,1) 50%, rgba(224,225,230,1) 51%, rgba(35,115,184,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2373b8', endColorstr='#2373b8', GradientType=1 );
+    position: relative;
+    top: 80px
+    }
+
+.top_bar img {
+    width: 110px;
+    position: relative;
+    bottom: 90px
+}
+
+p, h1, h2, h3, h4, h5, h6, ul, ol {
+    font-family: arial;
+    font-weight: bold;
+}
+
+span {
+    color: #23669f
+}
+
+.top_bar h1 {
+    position: relative;
+    font-size: 50px;
+    bottom: 180px;
+    left: 120px;
+}
+
+.top_bar h2 {
+    position: relative;
+    font-size: 35px;
+    bottom: 165px;
+    left: 20px;
+    color:white;
+    
+}
+
+
+.wrapper {
+    width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+    background: #e4e4e4; /* Old Browsers */
+    background: -webkit-linear-gradient(top,#e4e4e4,#ffffff); /*Safari 5.1-6*/
+    background: -o-linear-gradient(top,#e4e4e4,#ffffff); /*Opera 11.1-12*/
+    background: -moz-linear-gradient(top,#e4e4e4,#ffffff); /*Fx 3.6-15*/
+    background: linear-gradient(to bottom, #e4e4e4, #ffffff); /*Standard*/
+}
+
+
+.side_bar {
+    width: 250px;
+    position: relative;
+    top: 100px
+}
+
+.wrapper .side_bar{
+    background: "red";
+    
+}
+
+.side_bar .background {
+    width: 250px
+}
+
+.side_bar h4 span {
+    color:red;
+}
+
+.side_bar h4{
+    padding-bottom: 20px
+}
+
+.side_bar p {
+    font-weight: bold;
+    padding-bottom: 5px;    
+}
+
+
+.side_bar .pushdown {
+    padding-bottom: 20px;
+    
+    
+}
+
+.click a {
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    display: block;
+    text-align: center;
+
+ 
+}
+
+.side_bar #blue {
+    background-color: blue;
+    margin: 5px ;
+    border-radius: 5px;
+}
+
+.side_bar #orange {
+    background-color: orange;
+     margin: 5px ;
+    border-radius: 5px;
+}
+
+.side_bar .bar {
+    width:250px;
+    height: 1px;
+    background-color: darkgray;
+    margin-top: 20px;
+}
+
+.side_bar .background {
+    position: relative;
+    top: 20px;
+}
+
+.side_bar .revent p {
+    position: relative;
+    bottom: 340px;
+    font-size: 24px;
+    color: white;
+    padding: 10px;
+    text-align: center;  
+}
+
+.side_bar .ninja {
+    width: 100px;
+    position: relative;
+    bottom: 340px;
+    left: 70px
+}
+
+.revent a {
+    width: 400px;
+    padding: 5px 40px;
+    background-color: lightskyblue;
+    border-radius: 5px;
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    position: relative;
+    bottom:280px;
+    right: 70px;
+}
+
+.content {
+    width: 730px;
+    position: relative;
+    left: 270px;
+    bottom: 680px;
+}
+
+.content #home {
+    width: 30px;
+    display: flex;
+}
+
+.content #DNS {
+    display: inline-block;
+    position: relative;
+    bottom: 265px;
+    left: 40px;
+    color: blue;
+    font-size: 18px;
+}
+
+.content #phone {
+    width: 45px;
+    position: relative;
+    bottom:38px;
+    left: 430px;
+}
+
+.content #phone_number, h6 {
+    text-align: right;
+    position: relative;
+    bottom: 100px;
+    padding-right: 20px;
+}
+
+.content #phone_number {
+    font-size: 28px;
+    color: skyblue;
+    font-weight: bold;
+}
+
+.content .bar {
+    height: 1px;
+    background: grey;
+    position: relative;
+    bottom: 80px;
+    margin: 0px 10px;
+}
+
+
+.content .title {
+    font-size: 20px;
+    color: blue;
+    font-weight: bold;
+    margin-bottom: 10px;
+    position: relative;
+    bottom: 50px;
+}
+
+
+.content #client {
+    width: 300px;
+    position: relative;
+    left: 180px;
+    bottom:40px;
+    padding: 20px;
+    
+    
+}
+
+.content ul,ol {
+    padding-left: 40px;
+    position: relative;
+    bottom: 50px;
+    
+}
+
+.content li {
+    margin-top: 10px;
+}
+
+.content p {
+    position: relative;
+    bottom: 50px;
+}
+
+.content #big3 {
+    width: 150px;
+    position: relative;
+    right: 0px;
+    
+}
+
+.box .box_content {
+    position: relative;
+    width: 470px;
+    position: relative;
+    left: 170px;
+    bottom: 100px;
+}
+.box {
+    background: white;
+    margin: 20px;
+    border: 5px solid blue;
+    padding: 20px;
+    border-radius: 5px;
+    height: 180px
+}

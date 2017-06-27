@@ -1,0 +1,43 @@
+/*CSS reset settings here*/
+*{
+ margin: 0px;
+ padding: 0px;
+}
+
+h1 {
+    text-align: center;
+    font-style: bolder;
+}
+
+#wrapper{
+ width: 950px;
+ background-color: #d4d2ae;
+ margin: 20px auto;
+ padding: 20px;
+}
+#header{
+ margin: 30px;
+}
+
+}
+#main_content{
+ width:90%;
+ /*background-color: red;*/
+}
+
+.white{
+ background-color: #82b4ee;
+ display: inline-block;
+ border-color: black;
+ border-style: solid;
+ padding:10px;
+ margin: 5px;
+}
+
+.red{
+ background-color: #f36870;
+ display: inline-block;
+ border-color: black;
+ border-style: solid;
+ padding:10px;
+}
